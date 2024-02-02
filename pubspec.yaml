@@ -39,10 +39,11 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_svg: ^2.0.9
   smooth_page_indicator: ^1.0.0+2
   flutter_barcode_scanner: ^2.0.0
   barcode_widget: ^2.0.1
+  flutter_svg: ^2.0.9
+
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is

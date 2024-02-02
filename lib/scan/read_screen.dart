@@ -9,6 +9,7 @@ class ScanScreen extends StatefulWidget {
 class _ScanScreenState extends State<ScanScreen> {
   var qrstr = "let's Scan it";
   var height,width;
+  String scannedBarcode = "No data";
 
   @override
   Widget build(BuildContext context) {
@@ -53,5 +54,19 @@ class _ScanScreenState extends State<ScanScreen> {
         qrstr='unable to read this';
       });
     }
+  }
+  Future<void> scanBarcode() async {
+    String barcodeScanResult = await FlutterBarcodeScanner.scanBarcode(
+      "#ff6666", // color for the scan button
+      "Cancel",   // text for the cancel button
+      true,       // show flash icon
+      ScanMode.QR, // specify the type of scan
+    );
+
+    if (!mounted) return;
+
+    setState(() {
+      scannedBarcode = barcodeScanResult;
+    });
   }
 }

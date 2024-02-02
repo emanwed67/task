@@ -121,6 +121,9 @@ class GridViewItem extends StatelessWidget {
         width: 188,
         height: 271,
         decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage('empty_image_path.jpg'),
+          ),
           color: Colors.white,
           borderRadius: BorderRadius.circular(20),
         ),
@@ -176,6 +179,7 @@ class ListViewItem extends StatelessWidget {
                 color: Colors.white, fontWeight: FontWeight.w500, fontSize: 24),
           ),
         ),
+
       ],
     );
   }

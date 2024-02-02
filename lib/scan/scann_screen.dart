@@ -15,7 +15,7 @@ class _CreateScreenState extends State<CreateScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Creating QR code'),
+        title: const Text('Creating QR code'),
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,

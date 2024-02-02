@@ -8,32 +8,35 @@ class QrScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-          child: Column(
-        children: [
-          ElevatedButton(
-              onPressed: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => CreateScreen(),
-                    ));
-              },
-              child: const Text('create qr')),
-          const SizedBox(
-            height: 20,
-          ),
-          ElevatedButton(
-              onPressed: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => ScanScreen(),
-                    ));
-              },
-              child: const Text('scan')),
-        ],
-      )),
+      body: SafeArea(
+        child: Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => CreateScreen(),
+                      ));
+                },
+                child: const Text('create qr')),
+            const SizedBox(
+              height: 20,
+            ),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => ScanScreen(),
+                      ));
+                },
+                child: const Text('scan')),
+          ],
+        )),
+      ),
     );
   }
 }
